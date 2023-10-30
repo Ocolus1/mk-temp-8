@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .main-nav-menu-mobile {
+    background: rgba(107, 106, 106, 0.5);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(50px);
+  }
+
+  /* Navbar --> Navbar.jsx */
+  .header-menu > ul > li {
+    border-bottom: 1px solid transparent;
+  }
+  .header-menu > ul > li:hover {
+    color: black;
+    border-bottom: 1px solid black;
+    width: fit-content;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header-menu-mobile > ul > li {
+      border-bottom: 1px solid transparent;
+    }
+    .header-menu-mobile > ul > li:hover {
+      border-bottom: 1px solid black;
+      width: fit-content;
+      color: black;
+    }
+  }
+
+  /* Services Section */
+  .services-card-box:hover {
+    background: #ffffff;
+    box-shadow: 5px 5px 109px -20px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    border: 1px solid #dfdfdf40;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+
+  /* Pricing Section */
+  .pricing-card-box {
+    background: #ffffff;
+    box-shadow: 5px 5px 55px -10px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    border: 1px solid #d4d4d440;
+  }
+
+  .testimonial-card {
+    scrollbar-width: none; /* Firefox */
+  }
+
+  /* Testimonial Section */
+  .testimonial-card::-webkit-scrollbar {
+    display: none;
+  } /* Hide scrollbar for Chrome, Safari and Opera */
+
+  .testimonial-card-box {
+    background: #ffffff;
+    box-shadow: 5px 5px 30px -12px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    border: 1px solid #d4d4d440;
+    height: fit-content;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+
+  .dot.active {
+    background-color: #7c7c7c;
+  }
+
+  /* Footer Section */
+  .footer-link-item:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
